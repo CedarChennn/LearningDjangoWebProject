@@ -76,8 +76,17 @@ WSGI_APPLICATION = 'LearningDjangoWebProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        # 数据库名，数据库需要事先手动创建
+        'NAME': 'test',
+        # mysql用户名
+        'USER': 'root',
+        # 数据库密码
+        'PASSWORD': '123456',
+        # 主机名
+        'HOST': 'localhost',
+        'PORT': '3306',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

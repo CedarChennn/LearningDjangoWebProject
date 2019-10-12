@@ -1,13 +1,89 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Bootstrap 实例 - 列排序</title>
-	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
-	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Bootstrap </title>
+    <!--
+            <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <form role="form">
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" class="form-control" id="englishname" placeholder="input name please"/>
+        </div>
+        <div class="checkbox">
+            <label class="checkbox">
+                <input type="checkbox" />check out here
+            </label>
+        </div>
+        <button type="submit" class="btn-default">submit</button>
+    </form>
+    <form role="form">
+        <div class="form-group">
+            <label for="name">名称</label>
+            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+        </div>
+        <div class="form-group">
+            <label for="inputfile">文件输入</label>
+            <input type="file" id="inputfile">
+            <p class="help-block">这里是块级帮助文本的实例。</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox">请打勾
+            </label>
+        </div>
+        <button type="submit" class="btn btn-default">提交</button>
+    </form>
+    <table class="table table-striped" style="text-align:center;">
+        <caption style="text-align:center">Basic table layout</caption>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>city</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tanmay</td>
+                <td>Bangalore</td>
+            </tr>
+            <tr>
+                <td>Sachin</td>
+                <td>Mumbai</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><code>&lt;header&gt;</code> 作为内联元素被包围。</p>
+    <p>如果需要把代码显示为一个独立的块元素，请使用 &lt;pre&gt; 标签：</p>
+    <pre>
+        &lt;article&gt;
+            &lt;h1&gt;Article Heading&lt;/h1&gt;
+        &lt;/article&gt;
+    </pre>
+
+    <address>
+        <strong>Some Company, Inc.</strong><br>
+        007 street<br>
+        Some City, State XXXXX<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">a1249812431@gmail.com</a>
+    </address>
+    <abbr title="Real Simple Syndication" class="initialism">RSS</abbr>
+    <abbr title="World Wide Web">WWW</abbr><br>
+
+    <h1>this is h1 tittle<small>this is h1  subhead</small></h1>
+    <h2>this is h2 head</h2>
+    <p class="lead">This is an example that demonstrates the usage of the boot principal copy. .</p>
+
     <div class="container">
         <div class="row">
             <div class="col-md-3" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
