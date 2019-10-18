@@ -25,7 +25,8 @@ SECRET_KEY = '-+oie5t6%eot56qp1i%_e1-di9*t1by!-apiydbkyka@%$$)3-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -128,3 +129,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# 这一句目前取消对项目没有影响，这是啥情况啊
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    
+)

@@ -1,15 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap </title>
     <!--
             <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
     -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
 </head>
 <body>
     <!--   this is nav bar-->
@@ -35,6 +38,22 @@
     </div>
 
     <div style="margin-top:100px"></div>
+    <div class="container"
+
+    {% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+        <!--<li><a href="/store/{{ question.id }}/">{{ question.question_text }}</a></li>-->
+        <li><a href="{%url 'store:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+
+
+
+
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -83,25 +102,25 @@
             </div>
             <div class="col-sm-6 col-md-3">
                 <a href="#" class="thumbnail">
-                    <img src="https://avatars0.githubusercontent.com/u/31887104?s=40&amp;v=4"
+                    <img src="{% static 'img/download.png' %}"
                          alt="通用的占位符缩略图">
                 </a>
             </div>
             <div class="col-sm-6 col-md-3">
                 <a href="#" class="thumbnail">
-                    <img src="https://avatars0.githubusercontent.com/u/31887104?s=40&amp;v=4"
+                    <img src="{% static 'img/download.png' %}"
                          alt="通用的占位符缩略图">
                 </a>
             </div>
             <div class="col-sm-6 col-md-3">
                 <a href="#" class="thumbnail">
-                    <img src="https://avatars0.githubusercontent.com/u/31887104?s=40&amp;v=4"
+                    <img src="{% static 'img/download.png' %}"
                          alt="通用的占位符缩略图">
                 </a>
             </div>
             <div class="col-sm-6 col-md-3">
                 <a href="#" class="thumbnail">
-                    <img src="https://avatars0.githubusercontent.com/u/31887104?s=40&amp;v=4"
+                    <img src="{% static 'img/download.png' %}"
                          alt="通用的占位符缩略图">
                 </a>
             </div>
