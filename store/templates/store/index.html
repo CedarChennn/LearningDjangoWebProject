@@ -39,20 +39,26 @@
 
     <div style="margin-top:100px"></div>
     <div class="container">
-        <div class="row"></div>
+        <div class="row">
+            <div class="col-md-4 col-md-push-4">
+                {% if latest_question_list %}
+                <ul class="alert">
+                    {% for question in latest_question_list %}
+                    <!--<li><a href="/store/{{ question.id }}/">{{ question.question_text }}</a></li>-->
+                    <li class="alert-link"><a href="{%url 'store:detail' question.id %}">{{ question.question_text }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>No polls are available.</p>
+                {% endif %}
+            </div>
+            
+
+        </div>
 
     </div>
 
-    {% if latest_question_list %}
-    <ul>
-        {% for question in latest_question_list %}
-        <!--<li><a href="/store/{{ question.id }}/">{{ question.question_text }}</a></li>-->
-        <li><a href="{%url 'store:detail' question.id %}">{{ question.question_text }}</a></li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No polls are available.</p>
-    {% endif %}
+ 
 
 
 

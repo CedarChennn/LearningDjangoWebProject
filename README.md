@@ -1,5 +1,5 @@
 # LearningDjangoWebProject
-https://docs.djangoproject.com/zh-hans/2.2/intro/tutorial04/
+https://docs.djangoproject.com/zh-hans/2.2/intro/whatsnext/
 # 基本操作
 
 ```python
