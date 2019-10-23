@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*',]
 # Application definition
 
 INSTALLED_APPS = [
+    'studyabroadMIS.apps.StudyabroadmisConfig',
     'store.apps.StoreConfig',
     'django.contrib.admin',
     'django.contrib.auth',
