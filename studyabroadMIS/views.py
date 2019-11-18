@@ -7,7 +7,8 @@ def index(request):
     # return render(request,'store/index.html')
     template = loader.get_template('index.html')
     context = {
-        'context_test': "THis is a contest test",
+        'context_test': "this is context_test",
     }
-    return render(request, 'index.html', context)  
-    # return HttpResponse(template.render(context,request))  # context和request位置不能交换！
+    # return render(request, 'index.html', context)  
+    return HttpResponse(template.render(context,request))  # context和request位置不能交换！
+    # return HttpResponse("请求路径:{}" .format(request.META))
